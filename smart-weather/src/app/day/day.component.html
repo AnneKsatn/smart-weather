@@ -1,28 +1,26 @@
 <div class="content">
   <mat-grid-list cols="4">
-    <mat-grid-tile
-    *ngFor="let part of parts"
-        [colspan]="1"
-        [rowspan]="1"
-        >
-        <div  class="day-part">
-          <div class="title">
-            {{part.title}}
-          </div>
+    <mat-grid-tile *ngFor="let part of parts" [colspan]="1" [rowspan]="1">
 
-          <div class="main-text">
-            {{part.temp_min}}° .... {{part.temp_max}}°
-          </div>
-
-          <img class="image" [src]="part.icon" alt="За стеклом">
-          <div class="main-text">
-            Ветер: {{part.wind_speed}} м/с
-          </div>
-          <div class="main-text">
-            Влажность: {{part.humidity}}%
-          </div>
-
+      <div class="day-part">
+        <div class="title">
+          {{part.title}}
         </div>
+
+        <div class="main-text">
+          {{part.temp_min}}° .... {{part.temp_max}}°
+        </div>
+
+        <img class="image" [src]="part.icon" alt="За стеклом">
+
+        <div class="main-text">
+          Ветер: {{part.wind_speed}} м/с
+        </div>
+
+        <div class="main-text">
+          Влажность: {{part.humidity}}%
+        </div>
+      </div>
 
     </mat-grid-tile>
   </mat-grid-list>
