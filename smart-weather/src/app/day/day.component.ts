@@ -24,7 +24,7 @@ export class DayComponent implements OnInit, OnChanges {
     console.log("awddddd");
 
     this.parts = [];
-    this.weatherService.getWeather(this.xCoor, this.xCoor).subscribe((data) => {
+    this.weatherService.getWeather(this.xCoor, this.yCoor).subscribe((data) => {
       this.parts.push(data['forecasts']['0']['parts']['night'])
       this.parts.push(data['forecasts']['0']['parts']['morning'])
       this.parts.push(data['forecasts']['0']['parts']['day'])
