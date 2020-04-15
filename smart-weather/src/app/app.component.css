@@ -1,5 +1,9 @@
 .main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 70%;
+  height: 100%;
   border-radius: 5px;
   position: relative;
   background: inherit;
@@ -19,7 +23,6 @@
 }
 
 .main{
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +40,7 @@
 }
 
 .container {
-  width: 500px;
+  width:  80%;
   height: 260px;
 }
 
