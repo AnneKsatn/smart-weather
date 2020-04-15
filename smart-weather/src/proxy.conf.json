@@ -1,0 +1,9 @@
+{
+  "/v1/*": {
+    "target": "https://api.weather.yandex.ru",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {"^/v1" : "https://api.weather.yandex.ru/v1"}
+  }
+}
