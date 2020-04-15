@@ -1,15 +1,23 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+
 import { WeatherService } from './../../services/weather.service';
 import { Weather, DayPartWeather } from './../models/weather.model';
-import { Input} from '@angular/core';
 
+import { Component,
+  Input,
+  OnInit,
+  DoCheck,
+  OnChanges,
+ AfterContentInit,
+ AfterContentChecked,
+ AfterViewChecked,
+ AfterViewInit} from '@angular/core';
 
 @Component({
   selector: 'app-day',
   templateUrl: './day.component.html',
   styleUrls: ['./day.component.css']
 })
-export class DayComponent implements OnInit, OnChanges {
+export class DayComponent implements OnInit,  OnChanges{
 
   @Input('xCoor') xCoor: string;
   @Input('yCoor') yCoor: string;

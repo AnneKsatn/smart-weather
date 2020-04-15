@@ -8,6 +8,7 @@ import { DayComponent } from './day/day.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HttpClientModule, HttpClientJsonpModule} from '@angular/common/http';
 import { AngularYandexMapsModule } from 'angular8-yandex-maps';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AngularYandexMapsModule } from 'angular8-yandex-maps';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatGridListModule,
     HttpClientModule,
