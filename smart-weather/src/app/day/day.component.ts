@@ -21,13 +21,9 @@ export class DayComponent implements OnInit, OnChanges {
   ngOnChanges(){
     console.log(this.xCoor);
     console.log(this.yCoor);
-
     console.log("awddddd");
-  }
 
-  ngOnInit(): void {
-
-
+    this.parts = [];
     this.weatherService.getWeather(this.xCoor, this.xCoor).subscribe((data) => {
       this.parts.push(data['forecasts']['0']['parts']['night'])
       this.parts.push(data['forecasts']['0']['parts']['morning'])
@@ -44,6 +40,10 @@ export class DayComponent implements OnInit, OnChanges {
         item.icon = "https://yastatic.net/weather/i/icons/blueye/color/svg/" + item.icon + ".svg";
       });
     })
+  }
+
+  ngOnInit(): void {
+
 }
 
 
