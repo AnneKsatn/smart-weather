@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { WeatherService } from './../../services/weather.service';
 import { Weather, DayPartWeather } from './../models/weather.model';
+import { Input} from '@angular/core';
 
 
 @Component({
@@ -8,14 +9,26 @@ import { Weather, DayPartWeather } from './../models/weather.model';
   templateUrl: './day.component.html',
   styleUrls: ['./day.component.css']
 })
-export class DayComponent implements OnInit {
+export class DayComponent implements OnInit, OnChanges {
+
+  @Input('xCoor') xCoor: string;
+  @Input('yCoor') yCoor: string;
 
   constructor(private weatherService: WeatherService) { }
 
   parts: DayPartWeather[] = [];
 
+  ngOnChanges(){
+    console.log(this.xCoor);
+    console.log(this.yCoor);
+
+    console.log("awddddd");
+  }
+
   ngOnInit(): void {
-    this.weatherService.getWeather().subscribe((data) => {
+
+
+    this.weatherService.getWeather(this.xCoor, this.xCoor).subscribe((data) => {
       this.parts.push(data['forecasts']['0']['parts']['night'])
       this.parts.push(data['forecasts']['0']['parts']['morning'])
       this.parts.push(data['forecasts']['0']['parts']['day'])

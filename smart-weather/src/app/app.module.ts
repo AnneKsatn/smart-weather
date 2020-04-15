@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DayComponent } from './day/day.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HttpClientModule, HttpClientJsonpModule} from '@angular/common/http';
+import { AngularYandexMapsModule } from 'angular8-yandex-maps';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule, HttpClientJsonpModule} from '@angular/common/http';
     BrowserAnimationsModule,
     MatGridListModule,
     HttpClientModule,
-    HttpClientJsonpModule
+    HttpClientJsonpModule,
+    AngularYandexMapsModule.forRoot('658f67a2-fd77-42e9-b99e-2bd48c4ccad4')
   ],
   providers: [],
   bootstrap: [AppComponent]

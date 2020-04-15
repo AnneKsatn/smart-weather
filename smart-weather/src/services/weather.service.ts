@@ -12,9 +12,9 @@ export class WeatherService {
 
   }
 
-  getWeather(): Observable<any>{
+  getWeather(x: string, y: string): Observable<any>{
 
-    return this.httpClient.get('/v1/forecast?lat=55.75396&lon=37.620393&extra=true',  {
+    return this.httpClient.get(`/v1/forecast?lat=${x}&lon=${y}&extra=true`,  {
       headers: new HttpHeaders().append('X-Yandex-API-Key', '6ae49885-da5d-461f-af42-29d04bc3ec46')
      })
   }
