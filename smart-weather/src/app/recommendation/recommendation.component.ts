@@ -20,11 +20,11 @@ export class RecommendationComponent implements OnInit, OnChanges {
     }
 
     if(this.dayWeather.prec_strength === 0.25 || this.dayWeather.prec_strength === 0.5 ){
-      this.text = 'Сегодня ожидаются небольшие осадки, рекоммендуется одеть плащ и взять зонтик';
+      this.text = 'Сегодня ожидаются небольшие осадки, рекомендуется одеть плащ и взять зонтик';
     }
 
     if(this.dayWeather.prec_strength > 0.5 ){
-      this.text = 'Сегодня ожидаются очень сильные осадки, рекоммендуется одеть плащ и взять зонтик';
+      this.text = 'Сегодня ожидаются очень сильные осадки, рекомендуется одеть плащ и взять зонтик';
     }
   }
 
