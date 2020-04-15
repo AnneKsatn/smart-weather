@@ -9,11 +9,13 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { HttpClientModule, HttpClientJsonpModule} from '@angular/common/http';
 import { AngularYandexMapsModule } from 'angular8-yandex-maps';
 import {FormsModule} from '@angular/forms';
+import { RecommendationComponent } from './recommendation/recommendation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DayComponent
+    DayComponent,
+    RecommendationComponent
   ],
   imports: [
     BrowserModule,

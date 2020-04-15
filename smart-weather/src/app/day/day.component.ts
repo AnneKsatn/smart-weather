@@ -1,16 +1,7 @@
-
 import { WeatherService } from './../../services/weather.service';
 import { Weather, DayPartWeather } from './../models/weather.model';
 
-import { Component,
-  Input,
-  OnInit,
-  DoCheck,
-  OnChanges,
- AfterContentInit,
- AfterContentChecked,
- AfterViewChecked,
- AfterViewInit} from '@angular/core';
+import { Component, Input, OnInit, OnChanges} from '@angular/core';
 
 @Component({
   selector: 'app-day',

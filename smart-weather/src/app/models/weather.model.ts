@@ -9,6 +9,7 @@ export class Weather {
 
 export class DayPartWeather {
   constructor(
+    public prec_strength?: number,
     public title?: string,
     public temp_min?: string,
     public temp_max?: string,
