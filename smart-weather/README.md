@@ -22,3 +22,5 @@
 
 Run `ng serve` for a dev server
 
+### Видео проекта
+https://skr.sh/v1hPqHutKCM?a
