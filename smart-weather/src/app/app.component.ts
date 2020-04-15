@@ -21,21 +21,21 @@ export class AppComponent implements OnInit{
      console.log($event);
   }
 
-  ngOnInit(){
+  updateWeather() {
     this.weatherService.getWeather(this.xCoor, this.yCoor).subscribe((data) => {
       this.dayWeather = data['forecasts']['0']['parts']['day_short']
       console.log(this.dayWeather);
     });
   }
 
+  ngOnInit() {
+    this.updateWeather();
+  }
+
   onMouse(event: IEvent): void {
     this.xCoor = event.event['_sourceEvent']['originalEvent']['coords']['0'].toString();
     this.yCoor = event.event['_sourceEvent']['originalEvent']['coords']['1'].toString();
 
-
-    this.weatherService.getWeather(this.xCoor, this.yCoor).subscribe((data) => {
-      this.dayWeather = data['forecasts']['0']['parts']['day_short']
-      console.log(this.dayWeather);
-    });
+    this.updateWeather();
   }
 }
